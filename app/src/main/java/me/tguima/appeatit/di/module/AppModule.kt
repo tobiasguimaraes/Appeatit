@@ -4,9 +4,10 @@ import android.content.Context
 import dagger.Module
 import dagger.Provides
 import me.tguima.appeatit.App
+import me.tguima.appeatit.di.ui.ViewModelModule
 import javax.inject.Singleton
 
-@Module
+@Module(includes = [ViewModelModule::class])
 class AppModule {
 
     @Provides

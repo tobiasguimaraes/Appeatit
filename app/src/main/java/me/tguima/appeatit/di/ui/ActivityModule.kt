@@ -6,6 +6,7 @@ import me.tguima.appeatit.ui.main.MainActivity
 
 @Module
 interface ActivityModule {
+
     @ContributesAndroidInjector
     fun  contributeMainActivity() : MainActivity
 }

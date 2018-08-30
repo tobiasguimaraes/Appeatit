@@ -4,11 +4,15 @@ import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import me.tguima.appeatit.App
+import me.tguima.appeatit.di.module.AppModule
 import me.tguima.appeatit.di.ui.ActivityModule
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [
     AndroidSupportInjectionModule::class,
-    ActivityModule::class
+    ActivityModule::class,
+    AppModule::class
 ])
 interface AppComponent : AndroidInjector<App> {
 
