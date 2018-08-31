@@ -1,4 +1,4 @@
 package me.tguima.appeatit.model
 
-class Recipe {
+data class Recipe(var name : String) {
 }

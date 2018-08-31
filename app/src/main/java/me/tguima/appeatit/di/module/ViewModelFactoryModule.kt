@@ -1,4 +1,4 @@
-package me.tguima.appeatit.di.ui
+package me.tguima.appeatit.di.module
 
 import android.arch.lifecycle.ViewModelProvider
 import dagger.Binds
