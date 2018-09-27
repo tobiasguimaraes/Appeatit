@@ -12,7 +12,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "API_URL", "\"https://tguima.me\"")
+        buildConfigField("String", "API_URL", "\"http://192.168.100.6:8080/\"")
+        buildConfigField("String", "DB_NAME", "\"appeatitdb\"")
+        buildConfigField("int", "DB_VERSION", "1")
     }
     dataBinding {
         enabled true
@@ -30,22 +32,30 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // Android Support
-    implementation "com.android.support:support-v4:$support_version"
+    implementation "com.android.support:support-compat:$support_version"
     implementation "com.android.support:appcompat-v7:$support_version"
     implementation "com.android.support:design:$support_version"
     implementation "com.android.support:recyclerview-v7:$support_version"
     implementation 'com.android.support.constraint:constraint-layout:2.0.0-alpha2'
 
+    //Navigation
+
+    implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha06'
+    implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0-alpha06'
+
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
 
     // Android LiveData and ViewModel
     implementation "android.arch.lifecycle:extensions:1.1.1"
 
     // Android Databinding
-    kapt 'com.android.databinding:compiler:3.1.4'
+//    kapt 'com.android.databinding:compiler:3.1.4'
+//    kapt "androidx.databinding:databinding-compiler:3.3.0-alpha16"
+
 
     // RxJava and RxAndroid
     implementation 'io.reactivex.rxjava2:rxjava:2.1.13'
